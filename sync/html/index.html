@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>vagrant-focal64-php7.4</title>
+
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            html {
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+
+            #masthead {
+                width: 100%;
+            }
+            #masthead__navigation {
+
+            }
+
+            #content {
+                padding: 0 24px;
+            }
+            .content__section {
+                position: relative;
+            }
+            .content__section .anchor {
+                display: none;
+                position: absolute;
+                top: -72px;
+            }
+
+            .code {
+                display: block;
+                padding: 1em;
+                border-radius: 0.5em;
+                color: #FFFFFF;
+                background-color: #222222;
+            }
+            .code__line {
+                display: block;
+            }
+            .code__line::before {
+                display: inline;
+            }
+            .code__line--comment {
+                color: #557777;
+            }
+            .code__line--comment::before {
+                content: '# ';
+            }
+            .code__line--shell::before {
+                content: '$ ';
+                color: orange;
+            }
+
+            #colophon {
+                padding: 12px 24px;
+                font-size: 0.8em;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header id="masthead">
+            <div id="masthead__banner">
+
+            </div>
+            <nav id="masthead__navigation">
+                <ul>
+                    <li><a href="#configure-apache-server">Configure Apache Server</a></li>
+                    <li><a href="#configure-php">Configure PHP</a></li>
+                    <li><a href="#work-with-mysql">Work with MySQL</a></li>
+                    <li><a href="/phpinfo.php">phpinfo</a></li>
+                    <li><a href="/phpmyadmin">Enter phpmyadmin</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="content">
+
+
+            <section class="content__section">
+                <h1>vagrant-focal64-php7.4 - works!</h1>
+
+                <p>
+                    This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems.
+                    It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived.
+                    If you can read this page, it means that the Apache HTTP server installed at this site is working properly.
+                    You should replace this file (located at /var/www/html/index.html on the Machine or located at /sync/html/index.html in your Vagrant Folder)    before continuing to operate your HTTP server.
+                </p>
+
+            </section>
+
+            <section class="content__section">
+
+                <a class="anchor" name="configure-apache-server"></a>
+                <h2>Configure Apache Server</h2>
+
+                <h3>Enter Apache2 folder on system</h3>
+                <code class="code code--shell">
+                    <span class="code__line code__line--shell">cd /etc/apache2</span>
+                </code>
+
+                <h3>Configuration</h3>
+                <code class="code code--shell">
+                    <span class="code__line code__line--comment">ll /conf-available</span>
+                    <span class="code__line code__line--comment">List available conf files</span>
+                    <span class="code__line code__line--shell">ll /conf-available</span>
+                    <span class="code__line code__line--comment">List enabled conf files</span>
+                    <span class="code__line code__line--shell">ll /conf-enabled</span>
+                </code>
+
+                <h3>Mods</h3>
+                <code class="code code--shell">
+                    <span class="code__line code__line--comment">List available mod files</span>
+                    <span class="code__line code__line--shell">ll /mods-available</span>
+                    <span class="code__line code__line--comment">List enabled mod files</span>
+                    <span class="code__line code__line--shell">ll /mods-enabled</span>
+                </code>
+
+                <h3>Sites</h3>
+                <code class="code code--shell">
+                    <span class="code__line code__line--comment">List available site files</span>
+                    <span class="code__line code__line--shell">ll /sites-available</span>
+                    <span class="code__line code__line--comment">List enabled site files</span>
+                    <span class="code__line code__line--shell">ll /sites-enabled</span>
+                    <span class="code__line code__line--comment">Edit site configuration file</span>
+                    <span class="code__line code__line--shell">sudo nano /sites-available/vagrant.conf</span>
+                </code>
+
+            </section>
+
+            <section class="content__section">
+
+                <a class="anchor" name="configure-php"></a>
+                <h2>Configure PHP</h2>
+
+                <h3></h3>
+
+            </section>
+
+            <section class="content__section">
+
+                <a class="anchor" name="work-with-mysql"></a>
+                <h2>Work with MYSQL</h2>
+
+            </section>
+
+        </main>
+
+        <footer id="colophon">
+            <aside>Made with Love in Hamburg</aside>
+            <aside>&copy; Copyright by johninamillion</aside>
+        </footer>
+
+    </body>
+</html>
