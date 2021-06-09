@@ -14,7 +14,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell" do |shell|
     shell.path ="./vagrant/build.sh"
-    shell.path ="./vagrant/custom.sh"
   end
 
  config.trigger.after :up do
