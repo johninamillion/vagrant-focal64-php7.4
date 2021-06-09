@@ -20,6 +20,6 @@ Vagrant.configure(2) do |config|
     system("open", "http://localhost:8080")
  end
 
- config.vm.synced_folder "./sync", "/var/www", owner: "vagrant", group: "vagrant"
+ config.vm.synced_folder "./sync", "/var/www", owner: "vagrant", group: "www-data"
 
 end
